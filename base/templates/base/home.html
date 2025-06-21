@@ -49,13 +49,7 @@
 
 
     <div>
-        <h3>Recent Activities</h3>
-        <hr>
-        {% for message in room_messages %}
-            <div>
-                <small>@{{message.user}}  {{message.created|timesince}}</small>
-            </div>
-        {% endfor %}
+        {% include 'base/activity_component.html' %}
     </div>
 
 
