@@ -13,7 +13,7 @@
     {% for message in room_messages %}
 
     <div>
-        <small>@{{message.User}} {{message.created|timesince}} ago</small>
+        <small>@{{message.user}} {{message.created|timesince}} ago</small>
         <p>{{message.body}}</p>
         <hr>
     </div>

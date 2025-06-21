@@ -32,7 +32,7 @@ class Migration(migrations.Migration):
                 ('body', models.TextField()),
                 ('updated', models.DateTimeField(auto_now=True)),
                 ('created', models.DateTimeField(auto_now_add=True)),
-                ('User', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
                 ('room', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='base.room')),
             ],
         ),
