@@ -86,7 +86,8 @@ def home(request):
 # Renders a specific room page based on room id (pk)
 def room(request, pk):
     room = Room.objects.get(id=pk)
-    context = {"room": room}  # Prepare context with the room data
+    room_messages = room.message_set.all().order_by('-created')
+    context = {"room": room, 'room_messages' : room_messages}  # Prepare context with the room data
 
     return render(request, "base/room.html", context)  # Render the room page template
 
