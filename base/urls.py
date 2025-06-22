@@ -8,6 +8,7 @@ urlpatterns = [
 
     path('', views.home, name='home'),  # Home page
     path('room/<str:pk>/', views.room, name='room'),  # Room page
+    path('profile/<str:pk>/', views.userProfile, name = 'user-profile'),
 
     path('create-room/', views.createRoom, name="create-room"),
     path('update-room/<str:pk>/', views.updateRoom, name="update-room"),

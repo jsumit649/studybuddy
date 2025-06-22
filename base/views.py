@@ -104,6 +104,12 @@ def room(request, pk):
     return render(request, "base/room.html", context)  # Render the room page template
 
 
+def userProfile(request, pk):
+    user = User.objects.get(id=pk)
+    context = {'user': user}
+    return render(request,'base/profile.html', context)
+
+
 # Allows logged-in users to create a new room
 @login_required(login_url="login")
 def createRoom(request):
