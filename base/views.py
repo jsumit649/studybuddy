@@ -28,9 +28,15 @@ def loginPage(request):
         return redirect('home')
 
     if request.method == "POST":
-        username = request.POST.get("Username").lower()
+        username = request.POST.get("Username")
         password = request.POST.get("Password")
 
+        if not username or not password:
+            messages.error(request, "Both username and password are required")
+            context = {'page': page}
+            return render(request, "base/login_register.html", context)
+
+        username = username.lower()
         try:
             user = User.objects.get(username=username)
         except:
