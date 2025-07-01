@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     'base.apps.BaseConfig',  # Custom app for the studybud project
+
+    'rest_framework',
+    'api.apps.ApiConfig',  # API app for the studybud project
 ]
 
 MIDDLEWARE = [
