@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-+(9#+rhnwsc)xo#!90w*l0#p0e!7_^5-2av5mvol5zm9=yg@xf
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'https://studybuddy-jswp.onrender.com',
+    'www.studybuddy-jswp.onrender.com',
     'studybuddy-jswp.onrender.com',
 ]
 
@@ -58,6 +58,8 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
 
     "corsheaders.middleware.CorsMiddleware",
+
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
