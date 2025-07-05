@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'api.apps.ApiConfig',  # API app for the studybud project
 
-    "corsheaders",
+    'corsheaders',
 ]
 
 
