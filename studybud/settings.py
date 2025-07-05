@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'https://studybuddy-jswp.onrender.com',
+    'studybuddy-jswp.onrender.com',
 ]
 
 
