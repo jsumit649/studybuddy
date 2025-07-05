@@ -22,12 +22,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-+(9#+rhnwsc)xo#!90w*l0#p0e!7_^5-2av5mvol5zm9=yg@xf'
 
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'www.studybuddy-jswp.onrender.com',
     'studybuddy-jswp.onrender.com',
+    '127.0.0.1:8000',
+    '127.0.0.1',
 ]
 
 
@@ -57,9 +63,9 @@ AUTH_USER_MODEL = 'base.User'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
 
-    "corsheaders.middleware.CorsMiddleware",
-
     'whitenoise.middleware.WhiteNoiseMiddleware',
+
+    "corsheaders.middleware.CorsMiddleware",
 
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
